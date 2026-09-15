@@ -202,6 +202,45 @@ export const projects = [
     github: "https://github.com/princeraghav1401-maker/Rivora_Frontend",
     demo: null,
   },
+  {
+    id: "personal-portfolio",
+    name: "Quick-Notes",
+    image: "/quicknotes.png",
+    year: "2026",
+    type: "Java Full Stack Project",
+    summary:
+      "A full-stack notes management application that allows users to securely create, manage, organize, search, and pin their personal notes.",
+    description:
+      "Developed a full-stack Notes Management System with secure user authentication and user-specific note management. The application provides JWT-based login and registration, BCrypt password encryption, complete note CRUD operations, pinning, search, category filtering, profile management, validation, and error handling. The project follows a modular frontend-backend architecture using React.js and Vite on the frontend and Java, Spring Boot, Spring Security, and MongoDB on the backend..",
+    tech: ["Java 17",
+      "Spring Boot",
+      "Spring Web",
+      "Spring Security",
+      "JWT",
+      "Spring Data MongoDB",
+      "MongoDB",
+      "React.js",
+      "JavaScript",
+      "Vite",
+      "Axios",
+      "Bootstrap 5",
+      "CSS3",
+      "Lucide React",
+      "Maven"],
+    features: [
+      "Secure Authentication – User registration and login with JWT-based authentication and BCrypt password encryption.",
+
+      "Notes CRUD Management – Create, view, edit, and delete personal notes with validation and proper error handling.",
+
+      "Pin & Organize Notes – Pin important notes and organize notes using categories and tags.",
+
+      "Search & Category Filtering – Search notes by title or content and filter notes based on categories.",
+
+      "User-Specific Data – Each authenticated user can access and manage only their own notes using secured backend APIs."
+    ],
+    github: "https://github.com/princeraghav1401-maker/QuickNotes",
+    demo: null,
+  },
 ];
 
 export const education = [
