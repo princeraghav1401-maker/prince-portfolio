@@ -1,0 +1,376 @@
+/* =====================================================
+   LUXURY COSMIC CURSOR
+===================================================== */
+
+@media (pointer: fine) {
+
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none !important;
+  }
+
+  .luxury-cursor {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 999999;
+  }
+
+  /* =====================================================
+     COSMIC TRAIL
+  ===================================================== */
+
+  .cursor-trail {
+    position: fixed;
+
+    left: -60px;
+    top: -60px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(circle,
+        rgba(90, 200, 255, 0.10) 0%,
+        rgba(100, 80, 255, 0.06) 30%,
+        transparent 70%);
+
+    filter: blur(10px);
+
+    transform:
+      translate3d(-50%, -50%, 0);
+
+    will-change: transform;
+  }
+
+  /* =====================================================
+     MAGNETIC HALO
+  ===================================================== */
+
+  .cursor-halo {
+    position: fixed;
+
+    left: -26px;
+    top: -26px;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border:
+      1px solid rgba(170, 225, 255, 0.32);
+
+    background:
+      radial-gradient(circle,
+        rgba(255, 255, 255, 0.015),
+        transparent 70%);
+
+    box-shadow:
+      0 0 20px rgba(90, 190, 255, 0.08),
+
+      inset 0 0 20px rgba(120, 90, 255, 0.05);
+
+    backdrop-filter:
+      blur(5px);
+
+    -webkit-backdrop-filter:
+      blur(5px);
+
+    transform:
+      translate3d(-50%, -50%, 0);
+
+    will-change:
+      transform,
+      width,
+      height;
+  }
+
+  /* Halo tiny lights */
+
+  .halo-dot {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+      0 0 8px rgba(110, 220, 255, 1);
+  }
+
+  .halo-dot--top {
+    top: -2px;
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+  }
+
+  .halo-dot--bottom {
+    bottom: -2px;
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+
+    opacity: 0.35;
+  }
+
+  /* =====================================================
+     OUTER ORBIT
+  ===================================================== */
+
+  .cursor-orbit {
+    position: fixed;
+
+    left: -34px;
+    top: -34px;
+
+    width: 68px;
+    height: 68px;
+
+    border-radius: 50%;
+
+    border:
+      1px dashed rgba(150, 120, 255, 0.18);
+
+    transform:
+      translate3d(-50%, -50%, 0);
+  }
+
+  .cursor-orbit span {
+    position: absolute;
+
+    top: -2px;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+      rgba(180, 120, 255, 0.95);
+
+    box-shadow:
+      0 0 10px rgba(160, 100, 255, 0.9);
+  }
+
+  /* =====================================================
+     SATURN RING
+  ===================================================== */
+
+  .cursor-saturn-ring {
+    position: fixed;
+
+    left: -20px;
+    top: -9px;
+
+    width: 40px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    border:
+      1px solid rgba(185, 235, 255, 0.8);
+
+    background:
+      linear-gradient(90deg,
+        transparent,
+        rgba(110, 210, 255, 0.12),
+        transparent);
+
+    box-shadow:
+      0 0 10px rgba(80, 190, 255, 0.2);
+
+    transform:
+      translate3d(-50%, -50%, 0) rotate(-18deg);
+
+    will-change:
+      transform;
+  }
+
+  /* =====================================================
+     MAIN PLANET
+  ===================================================== */
+
+  .cursor-planet {
+    position: fixed;
+
+    left: -7px;
+    top: -7px;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background:
+      radial-gradient(circle at 30% 25%,
+        #ffffff 0%,
+        #d9f7ff 14%,
+        #79d8ff 32%,
+        #597cff 62%,
+        #7953e8 100%);
+
+    border:
+      1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+      0 0 7px rgba(255, 255, 255, 0.9),
+
+      0 0 18px rgba(80, 200, 255, 0.8),
+
+      0 0 35px rgba(100, 90, 255, 0.38);
+
+    transform:
+      translate3d(-50%, -50%, 0);
+
+    will-change:
+      transform;
+  }
+
+  /* =====================================================
+     PLANET LIGHT
+  ===================================================== */
+
+  .planet-light {
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    left: 2px;
+    top: 2px;
+
+    border-radius: 50%;
+
+    background:
+      rgba(255, 255, 255, 0.95);
+
+    filter:
+      blur(0.4px);
+  }
+
+  /* =====================================================
+     PLANET SHADOW
+  ===================================================== */
+
+  .planet-shadow {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+      linear-gradient(135deg,
+        transparent 35%,
+        rgba(20, 20, 60, 0.28) 100%);
+  }
+
+  /* =====================================================
+     CENTER POINT
+  ===================================================== */
+
+  .cursor-center {
+    position: fixed;
+
+    left: -2px;
+    top: -2px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 0 7px #ffffff,
+      0 0 14px rgba(120, 220, 255, 0.8);
+
+    transform:
+      translate3d(-50%, -50%, 0);
+  }
+
+  /* =====================================================
+     HOVER LABEL
+  ===================================================== */
+
+  .cursor-label {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    padding:
+      5px 9px;
+
+    border:
+      1px solid rgba(160, 220, 255, 0.16);
+
+    border-radius: 999px;
+
+    background:
+      rgba(8, 10, 25, 0.55);
+
+    backdrop-filter:
+      blur(12px);
+
+    -webkit-backdrop-filter:
+      blur(12px);
+
+    color:
+      rgba(220, 245, 255, 0.8);
+
+    font-family:
+      var(--font-mono);
+
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+
+    white-space: nowrap;
+
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.25);
+
+    transform:
+      translate(-50%, -50%);
+  }
+}
+
+/* =====================================================
+   TOUCH DEVICES
+===================================================== */
+
+@media (pointer: coarse) {
+  .luxury-cursor {
+    display: none;
+  }
+}
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .luxury-cursor {
+    display: none;
+  }
+}

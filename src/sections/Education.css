@@ -1,0 +1,565 @@
+/* =========================================================
+   PREMIUM EDUCATION
+   ========================================================= */
+
+.education {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* =========================================================
+   AMBIENT LIGHT
+   ========================================================= */
+
+.education__ambient {
+  position: absolute;
+
+  width: 30rem;
+  height: 30rem;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.085;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+.education__ambient--one {
+  top: 10%;
+  left: -18rem;
+
+  background: var(--accent-violet);
+}
+
+.education__ambient--two {
+  right: -18rem;
+  bottom: -8rem;
+
+  background: var(--accent-cyan);
+}
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  max-width: 950px;
+
+  margin: 3.5rem auto 0;
+
+  padding-left: 3rem;
+}
+
+/* =========================================================
+   TIMELINE RAIL
+   ========================================================= */
+
+.timeline__rail {
+  position: absolute;
+
+  top: 0.7rem;
+  bottom: 0.7rem;
+  left: 0.8rem;
+
+  width: 1px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.timeline__rail-progress {
+  display: block;
+
+  width: 100%;
+  height: 0;
+
+  background: linear-gradient(180deg,
+      var(--accent-cyan),
+      var(--accent-blue),
+      var(--accent-violet),
+      transparent);
+
+  box-shadow:
+    0 0 12px rgba(90, 180, 255, 0.4);
+}
+
+/* =========================================================
+   TIMELINE ITEM
+   ========================================================= */
+
+.timeline__item {
+  position: relative;
+}
+
+/* =========================================================
+   NODE
+   ========================================================= */
+
+.timeline__dot {
+  position: absolute;
+
+  left: -3rem;
+  top: 1.35rem;
+
+  display: grid;
+  place-items: center;
+
+  width: 27px;
+  height: 27px;
+
+  border-radius: 50%;
+
+  color: var(--accent-cyan);
+
+  background:
+    radial-gradient(circle,
+      rgba(80, 200, 255, 0.12),
+      rgba(255, 255, 255, 0.035));
+
+  border: 1px solid rgba(90, 190, 255, 0.28);
+
+  box-shadow:
+    0 0 0 5px rgba(80, 190, 255, 0.045),
+    0 0 24px rgba(80, 190, 255, 0.12);
+
+  z-index: 3;
+}
+
+.timeline__dot::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 5px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.timeline__card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(1.3rem, 3vw, 1.8rem);
+
+  border-radius: var(--radius-md);
+
+  background:
+    linear-gradient(145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.018));
+
+  border: 1px solid rgba(255, 255, 255, 0.085);
+
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.timeline__card:hover {
+  border-color: rgba(90, 185, 255, 0.28);
+
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.27),
+    0 0 35px rgba(80, 175, 255, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   CARD GLOW
+   ========================================================= */
+
+.timeline__card-glow {
+  position: absolute;
+
+  width: 13rem;
+  height: 13rem;
+
+  top: -8rem;
+  right: -4rem;
+
+  border-radius: 50%;
+
+  background: var(--accent-blue);
+
+  filter: blur(70px);
+
+  opacity: 0.06;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.5s ease;
+}
+
+.timeline__card:hover .timeline__card-glow {
+  opacity: 0.13;
+
+  transform: scale(1.2);
+}
+
+/* =========================================================
+   HUD CORNERS
+   ========================================================= */
+
+.timeline__corner {
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  opacity: 0.35;
+
+  pointer-events: none;
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.timeline__corner--tl {
+  top: 0.7rem;
+  left: 0.7rem;
+
+  border-top: 1px solid var(--accent-cyan);
+  border-left: 1px solid var(--accent-cyan);
+}
+
+.timeline__corner--br {
+  right: 0.7rem;
+  bottom: 0.7rem;
+
+  border-right: 1px solid var(--accent-blue);
+  border-bottom: 1px solid var(--accent-blue);
+}
+
+.timeline__card:hover .timeline__corner {
+  width: 21px;
+  height: 21px;
+
+  opacity: 0.8;
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.timeline__top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 1.25rem;
+}
+
+.timeline__index {
+  font-family: var(--font-mono);
+
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+
+  color: var(--text-muted);
+}
+
+.timeline__type {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+
+  color: var(--accent-cyan);
+}
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.timeline__card-head {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 0.85rem;
+}
+
+.timeline__degree-wrap {
+  min-width: 0;
+}
+
+.timeline__eyebrow {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+
+  color: var(--text-muted);
+}
+
+.timeline__degree {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: clamp(1rem, 2vw, 1.18rem);
+
+  font-weight: 650;
+
+  letter-spacing: -0.025em;
+}
+
+.timeline__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  flex-shrink: 0;
+
+  padding: 0.35rem 0.65rem;
+
+  font-size: 0.63rem;
+
+  color: var(--accent-cyan);
+
+  border-color: rgba(80, 200, 170, 0.15);
+
+  background: rgba(80, 200, 170, 0.045);
+}
+
+/* =========================================================
+   INSTITUTION
+   ========================================================= */
+
+.timeline__institution-row {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.timeline__institution {
+  color: var(--text-secondary);
+
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.timeline__arrow {
+  flex-shrink: 0;
+
+  color: var(--text-muted);
+
+  opacity: 0.5;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.timeline__card:hover .timeline__arrow {
+  color: var(--accent-cyan);
+
+  opacity: 1;
+
+  transform: translate(2px, -2px);
+}
+
+/* =========================================================
+   BOTTOM / PERIOD
+   ========================================================= */
+
+.timeline__bottom {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-top: 0.85rem;
+}
+
+.timeline__period {
+  flex-shrink: 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.08em;
+
+  color: var(--text-tertiary);
+}
+
+.timeline__line {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.08),
+      transparent);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (min-width: 700px) {
+  .timeline {
+    padding-left: 3.5rem;
+  }
+
+  .timeline__dot {
+    left: -3.5rem;
+  }
+
+  .timeline__rail {
+    left: 0.85rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .timeline {
+    max-width: 1000px;
+
+    gap: 1.8rem;
+  }
+
+  .timeline__card {
+    padding: 1.9rem 2rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 639px) {
+  .timeline {
+    margin-top: 2.5rem;
+
+    padding-left: 2rem;
+
+    gap: 1.2rem;
+  }
+
+  .timeline__rail {
+    left: 0.45rem;
+  }
+
+  .timeline__dot {
+    left: -2rem;
+
+    width: 24px;
+    height: 24px;
+
+    top: 1.2rem;
+  }
+
+  .timeline__card {
+    padding: 1.15rem;
+  }
+
+  .timeline__card-head {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .timeline__status {
+    margin-top: 0.15rem;
+  }
+
+  .timeline__institution {
+    font-size: 0.8rem;
+  }
+
+  .timeline__period {
+    font-size: 0.57rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .timeline {
+    padding-left: 1.65rem;
+  }
+
+  .timeline__dot {
+    left: -1.65rem;
+  }
+
+  .timeline__card {
+    padding: 1rem;
+  }
+
+  .timeline__type {
+    font-size: 0.47rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .timeline__card,
+  .timeline__dot,
+  .timeline__arrow,
+  .timeline__corner,
+  .timeline__card-glow {
+    transition: none !important;
+  }
+}
