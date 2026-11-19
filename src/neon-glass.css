@@ -1,0 +1,92 @@
+/* Glass surfaces for legacy section components */
+
+[class*="__ambient"] {
+  opacity: 0.12 !important;
+  filter: blur(100px);
+  background: var(--accent) !important;
+}
+
+.glass,
+.project-card,
+.experience__card,
+.timeline__card,
+.cert-card {
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-lg) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35) !important;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden;
+  padding: 0 !important;
+  transform: none !important;
+}
+
+.project-card__visual {
+  height: 200px !important;
+  background: var(--bg-elevated) !important;
+}
+
+.project-card__image {
+  height: 100% !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.project-card__body {
+  padding: 1.25rem !important;
+}
+
+.project-card:hover {
+  border-color: rgba(31, 245, 154, 0.3) !important;
+  box-shadow: 0 20px 50px rgba(31, 245, 154, 0.08) !important;
+}
+
+.project-card__tech-badge {
+  border-radius: var(--radius-pill) !important;
+  padding: 0.35rem 0.65rem !important;
+  border: 1px solid var(--surface-border) !important;
+  background: var(--surface) !important;
+}
+
+.project-modal {
+  background: var(--bg-elevated) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-lg) !important;
+  color: var(--ink);
+}
+
+.contact__form-card,
+.contact__info-card,
+.contact__channels.glass,
+.contact__inquiry.glass {
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-lg) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.scroll-progress {
+  background: var(--accent-gradient) !important;
+}
+
+.footer__border {
+  background: var(--line);
+}
+
+.footer__links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

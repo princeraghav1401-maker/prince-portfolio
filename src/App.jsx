@@ -1,5 +1,3 @@
-import AnimatedBackground from "./components/AnimatedBackground";
-import CustomCursor from "./components/CustomCursor";
 import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -11,6 +9,7 @@ import Projects from "./sections/Projects";
 import Education from "./sections/Education";
 import Certifications from "./sections/Certifications";
 import Contact from "./sections/Contact";
+import "./neon-glass.css";
 
 export default function App() {
   return (
@@ -19,8 +18,6 @@ export default function App() {
         Skip to main content
       </a>
 
-      <AnimatedBackground />
-      <CustomCursor />
       <ScrollProgress />
       <Navbar />
 

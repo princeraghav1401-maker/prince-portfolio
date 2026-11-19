@@ -25,7 +25,7 @@ export default function Certifications() {
             className="section-title"
             delay={0.05}
           >
-            Verified skills
+            HackerRank, Java
           </Reveal>
 
           <Reveal
@@ -33,8 +33,7 @@ export default function Certifications() {
             className="certifications__intro"
             delay={0.1}
           >
-            Credentials that validate my technical knowledge and continuous
-            learning journey.
+            A Java (Basic) certificate from HackerRank. One proof, earned.
           </Reveal>
         </div>
 
@@ -48,13 +47,9 @@ export default function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={viewportOnce}
               transition={{
-                duration: 0.65,
+                duration: 0.45,
                 ease: EASE,
-                delay: index * 0.08,
-              }}
-              whileHover={{
-                y: -8,
-                scale: 1.015,
+                delay: index * 0.04,
               }}
             >
               {/* Glow */}
@@ -74,11 +69,7 @@ export default function Certifications() {
 
               {/* Main Content */}
               <div className="cert-card__content">
-                <motion.div
-                  className="cert-card__icon"
-                  whileHover={{ rotate: -8, scale: 1.08 }}
-                  transition={{ duration: 0.25 }}
-                >
+                <motion.div className="cert-card__icon">
                   <Award size={25} strokeWidth={1.8} />
                 </motion.div>
 
@@ -127,12 +118,11 @@ export default function Certifications() {
 
           <div>
             <span className="certifications__footer-label">
-              CONTINUOUS LEARNING
+              STILL LEARNING
             </span>
 
             <p>
-              Building stronger foundations through practical learning and
-              technical certifications.
+              One Java certificate so far. More will follow the work.
             </p>
           </div>
         </Reveal>

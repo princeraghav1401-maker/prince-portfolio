@@ -1,23 +1,15 @@
 import { Github, Linkedin, Mail } from "lucide-react";
-import { motion } from "framer-motion";
 import { profile } from "../data/portfolioData";
-import { fadeIn, viewportOnce } from "../utils/motionVariants";
 import "./Footer.css";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <motion.footer
-      className="footer"
-      initial="hidden"
-      whileInView="show"
-      viewport={viewportOnce}
-      variants={fadeIn}
-    >
+    <footer className="footer">
       <div className="footer__border" />
       <div className="container footer__inner">
-        <p className="footer__text">Designed &amp; built by {profile.name}</p>
+        <p className="footer__text">Built by {profile.name}</p>
 
         <div className="footer__links">
           <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -33,6 +25,6 @@ export default function Footer() {
 
         <p className="footer__copy">&copy; {year} {profile.name}. All rights reserved.</p>
       </div>
-    </motion.footer>
+    </footer>
   );
 }

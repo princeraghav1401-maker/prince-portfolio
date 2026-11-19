@@ -52,6 +52,29 @@
   margin: 3.5rem auto 0;
 
   padding-left: 2.5rem;
+
+  --experience-pad: 2.5rem;
+}
+
+.experience__entry {
+  position: relative;
+  margin-bottom: 2.75rem;
+}
+
+.experience__entry:last-child {
+  margin-bottom: 0;
+}
+
+.experience__entry > .experience__node {
+  left: calc(0.65rem - var(--experience-pad));
+  top: 1.25rem;
+}
+
+.experience__entry:last-child > .experience__node {
+  box-shadow:
+    0 0 0 5px rgba(31, 245, 154, 0.12),
+    0 0 22px rgba(31, 245, 154, 0.45);
+  background: var(--accent);
 }
 
 /* Vertical rail */
@@ -91,9 +114,6 @@
 
 .experience__node {
   position: absolute;
-
-  left: 0.65rem;
-  top: 1rem;
 
   width: 10px;
   height: 10px;
@@ -610,6 +630,7 @@
 @media (min-width: 640px) {
   .experience__timeline {
     padding-left: 3rem;
+    --experience-pad: 3rem;
   }
 
   .experience__topics {
@@ -624,6 +645,7 @@
 @media (min-width: 900px) {
   .experience__timeline {
     padding-left: 3.5rem;
+    --experience-pad: 3.5rem;
   }
 
   .experience__card {
@@ -649,11 +671,15 @@
   .experience__timeline {
     margin-top: 2.5rem;
     padding-left: 1.65rem;
+    --experience-pad: 1.65rem;
   }
 
-  .experience__rail,
-  .experience__node {
+  .experience__rail {
     left: 0.35rem;
+  }
+
+  .experience__entry > .experience__node {
+    left: calc(0.35rem - var(--experience-pad));
   }
 
   .experience__node {
@@ -708,6 +734,7 @@
 @media (max-width: 400px) {
   .experience__timeline {
     padding-left: 1.35rem;
+    --experience-pad: 1.35rem;
   }
 
   .experience__card {

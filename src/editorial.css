@@ -1,0 +1,333 @@
+/* Luxury surface pass for sections that still use the previous card system. */
+
+[class*="__ambient"],
+[class*="-glow"],
+[class*="__glow"],
+[class*="__corner"],
+.project-card__grid,
+.project-card__scanline,
+.projects__view-cursor {
+  display: none !important;
+}
+
+.project-card,
+.experience__card,
+.timeline__card,
+.cert-card,
+.contact__info-card,
+.contact__form-card,
+.contact__availability,
+.glass {
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  border-radius: 0 !important;
+}
+
+.projects__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-card {
+  display: grid !important;
+  grid-template-columns: minmax(200px, 0.72fr) minmax(0, 1.4fr);
+  gap: clamp(1.25rem, 3vw, 2.75rem);
+  align-items: center;
+  padding: clamp(1.75rem, 3vw, 2.6rem) 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--line) !important;
+  transform: none !important;
+}
+
+.project-card:last-child {
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.project-card:hover {
+  padding-left: 0.6rem !important;
+  border-color: var(--line) !important;
+  box-shadow: none !important;
+}
+
+.project-card__visual {
+  height: auto !important;
+  min-height: 0;
+  background: transparent !important;
+  perspective: none;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: none;
+  border: 2px solid var(--ink);
+  transition: transform 0.35s var(--ease-editorial);
+}
+
+.project-card__body {
+  padding: 0 !important;
+}
+
+.project-card__name,
+.project-modal__title,
+.experience__role,
+.timeline__degree,
+.cert-card__name,
+.contact__form-header h3,
+.footer__text {
+  font-family: var(--font-display);
+  font-weight: 460;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+
+.project-card__index,
+.project-card__year,
+.project-card__type,
+.experience__meta-label,
+.experience__eyebrow,
+.timeline__index,
+.timeline__type,
+.cert-card__label,
+.cert-card__index,
+.contact__eyebrow,
+.contact__form-label {
+  color: var(--accent) !important;
+}
+
+.project-card__summary,
+.project-card__tech-badge,
+.experience__company,
+.timeline__institution,
+.cert-card__issuer,
+.contact__intro,
+.footer__copy {
+  color: var(--muted) !important;
+}
+
+.project-card__tech-badge {
+  border: 0 !important;
+  padding: 0.15rem 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.project-card__tech-badge,
+.experience__topic,
+.contact__field input,
+.contact__field textarea,
+.contact__info-card,
+.contact__form-card,
+.contact__social,
+.project-card__icon-btn,
+.project-card__details-btn,
+.cert-card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  border-color: var(--line) !important;
+}
+
+.project-card__details-btn,
+.project-card__icon-btn,
+.contact__submit,
+.contact__social {
+  color: var(--ink);
+  transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.project-card__details-btn:hover,
+.project-card__icon-btn:hover,
+.contact__submit:hover,
+.contact__social:hover {
+  color: var(--bg) !important;
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.experience__card,
+.timeline__card,
+.cert-card,
+.contact__form-card,
+.contact__info-card {
+  border: 1px solid var(--line) !important;
+  padding: clamp(1.4rem, 2vw, 2rem) !important;
+}
+
+.experience__timeline,
+.timeline {
+  max-width: none;
+}
+
+.experience__rail,
+.timeline__rail {
+  background: var(--line) !important;
+}
+
+.experience__rail-progress,
+.timeline__rail-progress,
+.scroll-progress {
+  background: var(--accent) !important;
+  box-shadow: none !important;
+}
+
+.experience__node,
+.timeline__dot {
+  background: var(--bg);
+  border: 1px solid var(--accent) !important;
+  box-shadow: none !important;
+}
+
+.contact__field input,
+.contact__field textarea {
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.project-modal-backdrop {
+  background: rgba(11, 19, 43, 0.72);
+}
+
+.project-modal {
+  background: #f7f4ee !important;
+  color: #141414;
+  border: 2px solid #141414 !important;
+  border-radius: 0 !important;
+  box-shadow: 16px 16px 0 #e23d2b !important;
+}
+
+:root[data-theme="dark"] .project-modal {
+  background: #161616 !important;
+  color: #f4f0e8;
+  border-color: #f4f0e8 !important;
+  box-shadow: 16px 16px 0 #ff5a45 !important;
+}
+
+.contact__hud,
+.contact__info-card::before {
+  display: none !important;
+}
+
+.contact__availability,
+.contact__info-card,
+.contact__social,
+.contact__form-card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.contact__info-card,
+.contact__availability,
+.contact__social {
+  border-bottom: 1px solid var(--line) !important;
+  padding-inline: 0 !important;
+}
+
+.contact__info-icon {
+  width: auto !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--accent) !important;
+}
+
+.contact__live,
+.contact__status-dot,
+.contact__online span,
+.contact__secure svg {
+  color: var(--accent) !important;
+  background: var(--accent) !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.contact__live,
+.contact__secure,
+.contact__online {
+  background: transparent !important;
+  color: var(--accent) !important;
+}
+
+.contact__availability strong,
+.contact__info-content a,
+.contact__info-content p,
+.contact__field input,
+.contact__field textarea {
+  color: var(--ink) !important;
+}
+
+.contact__field input,
+.contact__field textarea {
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-inline: 0 !important;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-bottom-color: var(--accent) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.contact__submit {
+  border: 1px solid var(--accent) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--ink) !important;
+  box-shadow: none !important;
+}
+
+.contact__submit:hover {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+}
+
+.footer {
+  padding-block: 3.5rem 4rem;
+}
+
+.footer__border {
+  width: min(100% - clamp(1.5rem, 6vw, 5rem), var(--max-width));
+  background: var(--line);
+}
+
+.footer__links a {
+  border-radius: 0;
+  border-color: var(--line);
+  color: var(--muted);
+}
+
+.footer__links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: none;
+}
+
+@media (max-width: 800px) {
+  .project-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card__image {
+    height: 200px;
+  }
+}

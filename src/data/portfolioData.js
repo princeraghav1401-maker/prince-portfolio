@@ -1,13 +1,11 @@
-// Single source of truth for all resume-derived content.
-// Keeping this separate from components makes the site easy to update
-// and keeps every section honest to the same facts.
+
 
 export const profile = {
   name: "Prince Raghav",
   role: "Java Full Stack Developer",
   tagline:
-    "Building scalable, responsive and user-focused web applications with Java, Spring Boot and React.js.",
-  availability: "Available for entry-level opportunities",
+    "I build full-stack web apps with Java, Spring Boot, Hibernate, and React — clean APIs, solid databases, and interfaces people enjoy using.",
+  availability: "Open to junior full-stack roles",
   email: "prince.raghav1401@gmail.com",
   phone: "+91-7078378216",
   github: "https://github.com/princeraghav1401-maker",
@@ -25,17 +23,51 @@ export const heroBadges = [
   "Oracle",
 ];
 
+/** Hero portrait technology orbit (icons only; labels in tooltips) */
+export const heroSkillOrbs = [
+  {
+    id: "java",
+    label: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    slot: "java",
+  },
+  {
+    id: "spring",
+    label: "Spring Boot",
+    icon: "https://cdn.simpleicons.org/springboot/6DB33F",
+    slot: "spring",
+  },
+  {
+    id: "react",
+    label: "React",
+    icon: "https://cdn.simpleicons.org/react/61DAFB",
+    slot: "react",
+  },
+  {
+    id: "mysql",
+    label: "MySQL",
+    icon: "https://cdn.simpleicons.org/mysql/4479A1",
+    slot: "mysql",
+  },
+  {
+    id: "oracle",
+    label: "Oracle",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg",
+    slot: "oracle",
+  },
+];
+
 export const aboutStats = [
-  { value: "2025", label: "BCA completed" },
+  { value: "2025", label: "BCA finished" },
   { value: "2025–27", label: "MCA in progress" },
-  { value: "6 Months", label: "Java full stack training" },
-  { value: "Full Stack", label: "Development focus" },
+  { value: "6 mo", label: "Full-stack training" },
+  { value: "Java", label: "Main focus" },
 ];
 
 export const aboutParagraphs = [
-  "Prince Raghav is a motivated and detail-oriented Java Full Stack Developer with hands-on knowledge of Java, Spring Boot, Hibernate, React.js, JDBC, Oracle Database and MySQL.",
-  "He has built full-stack applications involving CRUD operations, REST APIs, authentication and database integration — with a strong foundation in object-oriented programming, SQL, data structures, SDLC and MVC architecture.",
-  "Currently pursuing an MCA after completing his BCA in 2025, he is looking for an entry-level role where he can keep learning while contributing to real production systems.",
+  "I am a Java full-stack developer. I work with Java, Spring Boot, Hibernate, React, JDBC, Oracle, and MySQL.",
+  "The apps I have built cover records, logins, REST APIs, and databases — the ordinary work that makes a product real. OOP, SQL, data structures, SDLC, and MVC are the base under that.",
+  "BCA is done. MCA is underway. I want a junior role where the code ships and I keep learning beside people who already do this for a living.",
 ];
 
 export const skillCategories = [
@@ -102,6 +134,48 @@ export const training = {
   ],
 };
 
+export const experiences = [
+  {
+    id: "codesquadz-training",
+    icon: "briefcase",
+    metaLabel: "PROFESSIONAL DEVELOPMENT",
+    metaStatus: "COMPLETED",
+    eyebrow: "JAVA FULL STACK",
+    role: training.role,
+    company: training.company,
+    duration: training.duration,
+    topicsKicker: "CORE LEARNING",
+    topicsTitle: "Hands-on expertise",
+    topicsCountLabel: "MODULES",
+    topics: training.topics,
+    footerTag: "BUILD • LEARN • SHIP",
+    footerIndex: "01",
+  },
+  {
+    id: "freelance-rivora",
+    icon: "handshake",
+    metaLabel: "FREELANCE PROJECT",
+    metaStatus: "COMPLETED",
+    eyebrow: "REACT / E-COMMERCE",
+    role: "Frontend Developer (Freelance)",
+    company: "Rivora E-Commerce — Client Project",
+    duration: "2026",
+    topicsKicker: "DELIVERABLES",
+    topicsTitle: "Scope & outcomes",
+    topicsCountLabel: "ITEMS",
+    topics: [
+      "Responsive storefront with product search, filters, and category browsing",
+      "Product detail pages with image gallery and related recommendations",
+      "Cart, wishlist, and checkout flows with client-side validation",
+      "Reusable React component library with Framer Motion micro-interactions",
+      "Vite build pipeline, Tailwind CSS theming, and mobile-first layout",
+      "GitHub delivery, documentation, and handoff walkthrough with the client",
+    ],
+    footerTag: "DISCOVER • DESIGN • DELIVER",
+    footerIndex: "02",
+  },
+];
+
 export const projects = [
   {
     id: "cbse-result-portal",
@@ -110,7 +184,7 @@ export const projects = [
     year: "2025 – 2026",
     type: "Java Full Stack Project",
     summary:
-      "A role-based portal for managing student records and calculating results, with session-based authentication and Oracle BLOB image storage.",
+      "A school portal for student records and results. Admins sign in, store profile photos in Oracle, and scores calculate themselves.",
     description:
       "A complete Java full-stack application for schools to manage student records and results. Admins register and log in through a session-based authentication flow, then add, update, search and remove student records with server-side validation at every step. Profile images are stored directly as Oracle BLOBs and served back through a dedicated retrieval endpoint, while results are calculated automatically from stored marks. The data layer targets Oracle 10g, including ROWNUM-based pagination for compatibility with older Oracle installations.",
     tech: [
@@ -145,16 +219,16 @@ export const projects = [
     year: "2026",
     type: "React Frontend Project",
     summary:
-      "This site — a component-based React portfolio with Framer Motion animation and an EmailJS-powered contact form.",
+      "This website. React components, motion, and a contact form wired to EmailJS.",
     description:
-      "The portfolio you're viewing right now. Built as a fully component-based React application with a reusable animation system driven by Framer Motion, a working contact form wired to EmailJS, and careful attention to responsiveness and reduced-motion accessibility across every section.",
+      "The portfolio you're viewing right now. Built as a component-based React application with a reusable animation system, a working contact form wired to EmailJS, and careful attention to responsiveness and reduced-motion accessibility across every section.",
     tech: ["React.js", "JavaScript", "HTML5", "CSS3", "Framer Motion", "EmailJS"],
     features: [
       "Fully responsive, component-based architecture",
       "Framer Motion animation system",
       "Working contact form with EmailJS integration",
-      "Reusable UI primitives across every section",
-      "Modern glassmorphism / dark space visual design",
+      "Reusable sections across the site",
+      "Motion that respects reduced-motion settings",
     ],
     github: "https://github.com/princeraghav1401-maker",
     demo: null,
@@ -166,7 +240,7 @@ export const projects = [
     year: "2026",
     type: "React Full Stack Project",
     summary:
-      "A real-time multiplayer drawing and guessing game inspired by Skribbl.io, featuring private rooms, live canvas synchronization, word guessing, scoring, chat, and competitive gameplay.",
+      "A multiplayer drawing-and-guessing game. Private rooms, a shared canvas, chat, scores, and a winner at the end.",
     description:
       "Developed a real-time multiplayer web application where players can create or join private game rooms using room codes or invite links. The application supports turn-based drawing and guessing, configurable rounds and timers, real-time canvas synchronization using Socket.IO, automatic hints, live chat, scoring, leaderboard ranking, and winner declaration. The project follows a modular frontend-backend architecture using React and TypeScript on the frontend and Node.js, Express.js, and Socket.IO on the backend.",
     tech: ["React.js", "JavaScript", "HTML5 Canvas", "CSS3", "Framer Motion", "Vite" ,"Node.js", "Express.js", "Socket.IO","MySQL"],
@@ -187,7 +261,7 @@ export const projects = [
     year: "2026",
     type: "React Full Stack Project",
     summary:
-      "Rivora – A modern responsive e-commerce web application built with React.js, Vite, Tailwind CSS, and Framer Motion, featuring product browsing, search, cart, wishlist, and checkout functionality..",
+      "A shop front in React: search, filters, product pages, cart, wishlist, and checkout.",
     description:
       "Developed a modern and responsive e-commerce web application using React.js and Vite, featuring product browsing, search and filtering, product details, cart and wishlist management, and a smooth checkout experience with responsive UI and animations.",
 
@@ -209,7 +283,7 @@ export const projects = [
     year: "2026",
     type: "Java Full Stack Project",
     summary:
-      "A full-stack notes management application that allows users to securely create, manage, organize, search, and pin their personal notes.",
+      "Private notes with login. JWT, encrypted passwords, pin, search, and categories — each user sees only their own notes.",
     description:
       "Developed a full-stack Notes Management System with secure user authentication and user-specific note management. The application provides JWT-based login and registration, BCrypt password encryption, complete note CRUD operations, pinning, search, category filtering, profile management, validation, and error handling. The project follows a modular frontend-backend architecture using React.js and Vite on the frontend and Java, Spring Boot, Spring Security, and MongoDB on the backend..",
     tech: ["Java 17",

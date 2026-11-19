@@ -28,7 +28,7 @@ export default function Education() {
             className="section-title"
             delay={0.05}
           >
-            Academic timeline
+            From board exams to MCA
           </Reveal>
 
           <Reveal
@@ -36,9 +36,9 @@ export default function Education() {
             className="section-desc"
             delay={0.1}
           >
-            A continuous learning journey built around strong
-            fundamentals, practical development and a growing
-            full-stack mindset.
+            High school and intermediate under the Uttar Pradesh board,
+            then BCA and MCA at Marathwada Institute of Technology,
+            Bulandshahr.
           </Reveal>
         </div>
 
@@ -75,14 +75,6 @@ export default function Education() {
               {/* Timeline node */}
               <motion.span
                 className="timeline__dot"
-                whileInView={{
-                  scale: [0.7, 1.12, 1],
-                }}
-                viewport={viewportOnce}
-                transition={{
-                  duration: 0.55,
-                  delay: index * 0.12,
-                }}
               >
                 <GraduationCap size={14} />
               </motion.span>
@@ -90,10 +82,6 @@ export default function Education() {
               {/* Card */}
               <motion.article
                 className="timeline__card glass"
-                whileHover={{
-                  x: 6,
-                  y: -3,
-                }}
               >
                 <div className="timeline__card-glow" />
 
